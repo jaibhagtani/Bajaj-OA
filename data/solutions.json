@@ -50,5 +50,31 @@
         "message": "Webhook processed successfully"
       }
     }
+  },
+  {
+    "timestamp": "2025-09-22T10:07:54.607Z",
+    "name": "John Doe",
+    "regNo": "118957643825",
+    "questionNumber": 1,
+    "finalQuery": "SELECT p.AMOUNT AS SALARY,\n       CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) AS NAME,\n       TIMESTAMPDIFF(YEAR, e.DOB, CURDATE()) AS AGE,\n       d.DEPARTMENT_NAME\nFROM PAYMENTS p\nJOIN EMPLOYEE e ON p.EMP_ID = e.EMP_ID\nJOIN DEPARTMENT d ON e.DEPARTMENT = d.DEPARTMENT_ID\nWHERE DAY(p.PAYMENT_TIME) <> 1\n  AND p.AMOUNT = (SELECT MAX(amount) FROM PAYMENTS WHERE DAY(payment_time) <> 1);",
+    "webhookUrl": "https://bfhldevapigw.healthrx.co.in/hiring/testWebhook/JAVA",
+    "submitted": false,
+    "submitResponse": null
+  },
+  {
+    "timestamp": "2025-09-22T10:07:54.607Z",
+    "name": "John Doe",
+    "regNo": "118957643825",
+    "questionNumber": 1,
+    "finalQuery": "SELECT p.AMOUNT AS SALARY,\n       CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) AS NAME,\n       TIMESTAMPDIFF(YEAR, e.DOB, CURDATE()) AS AGE,\n       d.DEPARTMENT_NAME\nFROM PAYMENTS p\nJOIN EMPLOYEE e ON p.EMP_ID = e.EMP_ID\nJOIN DEPARTMENT d ON e.DEPARTMENT = d.DEPARTMENT_ID\nWHERE DAY(p.PAYMENT_TIME) <> 1\n  AND p.AMOUNT = (SELECT MAX(amount) FROM PAYMENTS WHERE DAY(payment_time) <> 1);",
+    "webhookUrl": "https://bfhldevapigw.healthrx.co.in/hiring/testWebhook/JAVA",
+    "submitted": true,
+    "submitResponse": {
+      "status": 200,
+      "data": {
+        "success": true,
+        "message": "Webhook processed successfully"
+      }
+    }
   }
 ]
