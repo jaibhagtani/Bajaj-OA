@@ -1,0 +1,16 @@
+{
+  "name": "bajaj-node",
+  "version": "1.0.0",
+  "description": "Startup app: call generateWebhook -> solve SQL -> post finalQuery",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "axios": "^1.5.0",
+    "dotenv": "^16.3.1"
+  }
+}
